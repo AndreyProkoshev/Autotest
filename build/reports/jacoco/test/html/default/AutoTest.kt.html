@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AutoTest.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">AutoTest</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">AutoTest.kt</span></div><h1>AutoTest.kt</h1><pre class="source lang-java linenums"><span class="pc" id="L1">var masterCardCom: Double = 0.006</span>
+<span class="pc" id="L2">var maestroCardCom: Double = 0.006</span>
+<span class="pc" id="L3">var overMastercardCom: Int = 20</span>
+<span class="pc" id="L4">var overMaestrocardCom: Int = 20</span>
+<span class="pc" id="L5">var visaCom: Double = 0.0075</span>
+<span class="pc" id="L6">var mirCom: Double = 0.0075</span>
+
+fun main() {
+<span class="nc" id="L9">    println(commision(&quot;Mastercard&quot;,300_000, 180_000))</span>
+<span class="nc" id="L10">}</span>
+
+fun commision(typeCard: String, transferMounth: Int, transfer: Int): Any {
+<span class="pc bpc" id="L13" title="5 of 16 branches missed.">    return when (typeCard) {</span>
+        &quot;Mastercard&quot;,
+<span class="fc bfc" id="L15" title="All 4 branches covered.">        -&gt; if (transferMounth + transfer &lt;= 600_000 &amp;&amp; transfer &lt;= 150_000) {</span>
+<span class="pc bpc" id="L16" title="1 of 4 branches missed.">            if (transferMounth + transfer &gt;= 300 &amp;&amp; transferMounth + transfer &lt;= 75000) {</span>
+<span class="fc" id="L17">                0</span>
+            }
+<span class="pc bpc" id="L19" title="1 of 4 branches missed.">            else if(transferMounth + transfer &gt; 75000 &amp;&amp; transferMounth &lt;= 75000){</span>
+<span class="fc" id="L20">                (transferMounth + transfer - 75000) * masterCardCom + overMastercardCom</span>
+            }
+            else {
+<span class="fc" id="L23">                transfer * masterCardCom + overMastercardCom</span>
+            }
+<span class="fc" id="L25">        } else &quot;РџСЂРµРІС‹С€РµРЅ Р»РёРјРёС‚&quot;</span>
+
+        &quot;Maestro&quot;,
+<span class="fc bfc" id="L28" title="All 4 branches covered.">        -&gt; if (transferMounth + transfer &lt;= 600_000 &amp;&amp; transfer &lt;= 150_000) {</span>
+<span class="pc bpc" id="L29" title="1 of 4 branches missed.">            if (transferMounth + transfer &gt;= 300 &amp;&amp; transferMounth + transfer &lt;= 75000) {</span>
+<span class="fc" id="L30">                0</span>
+            }
+<span class="pc bpc" id="L32" title="1 of 4 branches missed.">            else if(transferMounth + transfer &gt; 75000 &amp;&amp; transferMounth &lt;= 75000){</span>
+<span class="fc" id="L33">                (transferMounth + transfer - 75000) * maestroCardCom + overMaestrocardCom</span>
+            }
+            else {
+<span class="fc" id="L36">                transfer * maestroCardCom + overMaestrocardCom</span>
+            }
+<span class="fc" id="L38">        } else &quot;РџСЂРµРІС‹С€РµРЅ Р»РёРјРёС‚&quot;</span>
+
+        &quot;РњРёСЂ&quot; -&gt;
+<span class="fc bfc" id="L41" title="All 4 branches covered.">            if (transferMounth + transfer &lt;= 600_000 &amp;&amp; transfer &lt;= 150_000) {</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">                if ((transfer * mirCom) &lt; 35) {</span>
+<span class="fc" id="L43">                    35</span>
+                } else {
+<span class="fc" id="L45">                    transfer * mirCom</span>
+                }
+<span class="fc" id="L47">            } else &quot;РџСЂРµРІС‹С€РµРЅ Р»РёРјРёС‚&quot;</span>
+
+<span class="fc bfc" id="L49" title="All 4 branches covered.">        &quot;Visa&quot; -&gt; if (transferMounth + transfer &lt;= 600_000 &amp;&amp; transfer &lt;= 150_000) {</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">            if ((transfer * visaCom) &lt; 35) {</span>
+<span class="fc" id="L51">                35</span>
+            } else {
+<span class="fc" id="L53">                transfer * visaCom</span>
+            }
+<span class="fc" id="L55">        } else &quot;РџСЂРµРІС‹С€РµРЅ Р»РёРјРёС‚&quot;</span>
+
+<span class="pc bpc" id="L57" title="1 of 4 branches missed.">        &quot;VK&quot; -&gt; if (transferMounth + transfer &lt;= 400_000 &amp;&amp; transfer &lt;= 150_000) {</span>
+<span class="fc" id="L58">            0</span>
+<span class="fc" id="L59">        } else &quot;РџСЂРµРІС‹С€РµРЅ Р»РёРјРёС‚&quot;</span>
+<span class="fc" id="L60">        else -&gt; &quot;РўРёРї РєР°СЂС‚С‹ РЅРµ РїРѕРґРµСЂР¶РёРІР°РµС‚СЃСЏ&quot;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>
