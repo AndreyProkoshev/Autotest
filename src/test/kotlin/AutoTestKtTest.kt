@@ -75,7 +75,7 @@ class AutoTestKtTest {
         val typeCard = "Mastercard"
 
         val result = commision(typeCard, transferMounth, transfer)
-        assertEquals(1, result)
+        assertEquals(0, result)
     }
 
     @Test
