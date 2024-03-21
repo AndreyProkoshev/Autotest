@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AutoTestKtTest" tests="21" skipped="0" failures="0" errors="0" timestamp="2024-03-20T19:04:04" hostname="DESKTOP-E5CQ5V7" time="0.029">
+<testsuite name="AutoTestKtTest" tests="21" skipped="0" failures="0" errors="0" timestamp="2024-03-21T17:27:01" hostname="DESKTOP-E5CQ5V7" time="0.03">
   <properties/>
-  <testcase name="otherCard" classname="AutoTestKtTest" time="0.01"/>
-  <testcase name="commisionMasterCard" classname="AutoTestKtTest" time="0.001"/>
+  <testcase name="otherCard" classname="AutoTestKtTest" time="0.012"/>
+  <testcase name="commisionMasterCard" classname="AutoTestKtTest" time="0.0"/>
   <testcase name="commisionMaestro" classname="AutoTestKtTest" time="0.0"/>
-  <testcase name="commisionMasterCard2" classname="AutoTestKtTest" time="0.002"/>
+  <testcase name="commisionMasterCard2" classname="AutoTestKtTest" time="0.0"/>
   <testcase name="commisionMasterCardOverlimit2" classname="AutoTestKtTest" time="0.001"/>
   <testcase name="commisionMir" classname="AutoTestKtTest" time="0.0"/>
-  <testcase name="commisionMasterCardFor0" classname="AutoTestKtTest" time="0.001"/>
+  <testcase name="commisionMasterCardFor0" classname="AutoTestKtTest" time="0.0"/>
   <testcase name="mincommisionVisa" classname="AutoTestKtTest" time="0.001"/>
   <testcase name="overcommisionMir2" classname="AutoTestKtTest" time="0.0"/>
-  <testcase name="overcommisionVisa" classname="AutoTestKtTest" time="0.0"/>
+  <testcase name="overcommisionVisa" classname="AutoTestKtTest" time="0.001"/>
   <testcase name="commisionVisa" classname="AutoTestKtTest" time="0.0"/>
   <testcase name="overcommisionVk" classname="AutoTestKtTest" time="0.001"/>
-  <testcase name="overcommisionVisa2" classname="AutoTestKtTest" time="0.002"/>
-  <testcase name="commisionMasterCardOverlimit" classname="AutoTestKtTest" time="0.001"/>
-  <testcase name="mincommisionMir" classname="AutoTestKtTest" time="0.0"/>
-  <testcase name="commisionMaestroForO" classname="AutoTestKtTest" time="0.001"/>
-  <testcase name="overcommisionMaestro2" classname="AutoTestKtTest" time="0.0"/>
+  <testcase name="overcommisionVisa2" classname="AutoTestKtTest" time="0.003"/>
+  <testcase name="commisionMasterCardOverlimit" classname="AutoTestKtTest" time="0.0"/>
+  <testcase name="mincommisionMir" classname="AutoTestKtTest" time="0.001"/>
+  <testcase name="commisionMaestroForO" classname="AutoTestKtTest" time="0.0"/>
+  <testcase name="overcommisionMaestro2" classname="AutoTestKtTest" time="0.006"/>
   <testcase name="overcommisionMir" classname="AutoTestKtTest" time="0.0"/>
   <testcase name="commisionVk" classname="AutoTestKtTest" time="0.001"/>
   <testcase name="overcommisionMaestro" classname="AutoTestKtTest" time="0.0"/>
